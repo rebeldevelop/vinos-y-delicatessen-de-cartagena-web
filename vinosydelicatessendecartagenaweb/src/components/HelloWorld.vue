@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>CHOPES SOY YO ESTAS AHI?</h2>
+    <h2>SII ESTOY ACÁ</h2>
     <ul>
       <li>
         <a
