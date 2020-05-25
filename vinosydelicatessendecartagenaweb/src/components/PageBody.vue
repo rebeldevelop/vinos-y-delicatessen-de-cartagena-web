@@ -1,22 +1,24 @@
 <template>
   <div class="pageBody-GeneralWrapper">
-      <div class="section01">
-          <div>
-              <h1>Soy la sección 1</h1>
-          </div>
-      </div>
+    <Inicio class="inicio--container"></Inicio>
+    <QuienesSomos class="quienes_somos--container"></QuienesSomos>
+    <FormularioContacto class="formulario_contacto--container"></FormularioContacto>
   </div>
 </template>
 
 <script>
+import Inicio from '@/components/Inicio'
+import QuienesSomos from '@/components/QuienesSomos'
+import FormularioContacto from '@/components/FormularioContacto'
+
 export default {
   name: 'PageBody',
   data () {
     return {
     }
-  }
+  },
   // computed : {}
-  // components: {}
+  components: { Inicio, QuienesSomos, FormularioContacto }
   // props: {}
   // methods: {}
   // created () {}
@@ -27,13 +29,24 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .pageBody-GeneralWrapper{
-    width: 100vw;
-    height: auto;
-    background-color: burlywood;
+  width: 100vw;
+  height: auto;
+  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
 }
 .section01{
-    width: 100vw;
-    height: 200px;
-    background-color: darkgray;
+  height: 200px;
+  background-color: darkgray;
+}
+.inicio--container{
+    background-color: pink;
+}
+.quienes_somos--container{
+    background-color: palevioletred;
+}
+.formulario_contacto--container{
+    background-color: violet;
+
 }
 </style>
