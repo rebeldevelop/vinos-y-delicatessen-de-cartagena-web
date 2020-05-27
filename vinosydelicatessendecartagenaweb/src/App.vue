@@ -13,7 +13,8 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  color: #751027;
+  font-family: 'Abhaya Libre', serif, 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center;
@@ -37,7 +38,5 @@ html{
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    color: #751027;
-    font-family: 'Abhaya Libre', serif;
 }
 </style>
