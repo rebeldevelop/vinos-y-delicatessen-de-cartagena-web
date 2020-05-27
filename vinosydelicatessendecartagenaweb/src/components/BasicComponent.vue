@@ -8,6 +8,8 @@ export default {
   name: 'BasicComponent',
   data () {
     return {
+      mensaje: 'este es el mensaje',
+      numero: 2
     }
   }
   // computed : {}
