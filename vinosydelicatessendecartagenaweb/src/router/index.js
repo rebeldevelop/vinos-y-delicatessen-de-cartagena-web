@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import ScrollPrueba from '@/components/ScrollPrueba'
+import Main from '@/components/Main'
 
 Vue.use(Router)
 
@@ -8,8 +8,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'ScrollPrueba',
-      component: ScrollPrueba
+      name: 'Main',
+      component: Main
     }
   ]
 })
