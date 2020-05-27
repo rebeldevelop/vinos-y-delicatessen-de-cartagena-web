@@ -30,7 +30,6 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-    color: #fff;
     text-align: center;
 }
 
