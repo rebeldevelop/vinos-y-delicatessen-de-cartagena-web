@@ -1,7 +1,6 @@
 <template>
    <div class="inicio_section">
-    <h1>Estoy en la rama de fireabse</h1>
-    <h1 class="inicio_section--title text-center">Somos tradición y compromiso</h1>
+    <h1 class="inicio_section--title text-center titulo_style">Somos tradición y compromiso</h1>
     </div>
 </template>
 
@@ -35,6 +34,7 @@ export default {
 }
 
 .inicio_section--title{
+    font-size: 5rem;
     text-align: center;
     position: relative;
     top: 50%;

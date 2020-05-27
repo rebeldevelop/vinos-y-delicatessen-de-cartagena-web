@@ -27,6 +27,5 @@ export default {
 .main-GeneralWrapper{
     width: 100vw;
     height: auto;
-    background-color: beige;
 }
 </style>

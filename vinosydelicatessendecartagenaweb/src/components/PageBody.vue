@@ -31,22 +31,11 @@ export default {
 .pageBody-GeneralWrapper{
   width: 100vw;
   height: auto;
-  background-color: burlywood;
   display: flex;
   flex-direction: column;
 }
 .section01{
   height: 200px;
-  background-color: darkgray;
 }
-.inicio--container{
-    background-color: pink;
-}
-.quienes_somos--container{
-    background-color: palevioletred;
-}
-.formulario_contacto--container{
-    background-color: violet;
 
-}
 </style>
