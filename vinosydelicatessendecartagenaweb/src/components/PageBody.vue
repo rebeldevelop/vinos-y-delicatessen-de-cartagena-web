@@ -1,8 +1,8 @@
 <template>
   <div class="pageBody-GeneralWrapper">
-    <Inicio class="inicio--container"></Inicio>
-    <QuienesSomos class="quienes_somos--container"></QuienesSomos>
-    <FormularioContacto class="formulario_contacto--container"></FormularioContacto>
+    <Inicio class="inicio--container" id="inicio"></Inicio>
+    <QuienesSomos class="quienes_somos--container" id="quienesSomos"></QuienesSomos>
+    <FormularioContacto class="formulario_contacto--container" id="formularioContacto"></FormularioContacto>
   </div>
 </template>
 
