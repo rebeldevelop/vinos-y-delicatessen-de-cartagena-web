@@ -18,22 +18,21 @@ let transporter = nodemailer.createTransport({
 exports.sendMail = functions.https.onRequest((req, res) => {
   cors(req, res, () => {
     // getting dest email by query string
+    const from = req.query.from
     const dest = req.query.dest
+    const body = req.query.html
 
     const mailOptions = {
-      from: 'RebelDevelop<rebeldevelop@gmail.com>', // Something like: Jane Doe <janedoe@gmail.com>
+      from: from, // 'RebelDevelop<rebeldevelop@gmail.com>', // Something like: Jane Doe <janedoe@gmail.com>
       to: dest,
-      subject: 'Rebel Develop te envía tol imeil', // email subject
-      html: `<p style="font-size: 16px;"></p>
-            ` // email content in HTML
-    }
-
-    // returning result
+      subject: 'Nuevo mail desde la web', // email subject
+      html: body
+    }    
     return transporter.sendMail(mailOptions, (erro, info) => {
       if (erro) {
         return res.send(erro.toString())
       }
-      return res.send('Sended')
+      return res.send('Mensaje enviado correctamente')
     })
   })
 })
