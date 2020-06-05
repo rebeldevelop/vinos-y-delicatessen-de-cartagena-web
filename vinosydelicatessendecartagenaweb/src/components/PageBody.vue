@@ -3,6 +3,7 @@
     <Inicio class="inicio--container"></Inicio>
     <QuienesSomos class="quienes_somos--container"></QuienesSomos>
     <FormularioContacto class="formulario_contacto--container"></FormularioContacto>
+    <Footer class="footer_container"></Footer>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Inicio from '@/components/Inicio'
 import QuienesSomos from '@/components/QuienesSomos'
 import FormularioContacto from '@/components/FormularioContacto'
+import Footer from '@/components/Footer'
 
 export default {
   name: 'PageBody',
@@ -18,7 +20,7 @@ export default {
     }
   },
   // computed : {}
-  components: { Inicio, QuienesSomos, FormularioContacto }
+  components: { Inicio, QuienesSomos, FormularioContacto, Footer }
   // props: {}
   // methods: {}
   // created () {}
@@ -36,6 +38,10 @@ export default {
 }
 .section01{
   height: 200px;
+}
+.footer_container{
+  background-color: #9C1534;
+  height: 150px;
 }
 
 </style>

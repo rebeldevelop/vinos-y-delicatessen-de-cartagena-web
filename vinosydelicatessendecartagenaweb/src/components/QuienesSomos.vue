@@ -1,14 +1,14 @@
 <template>
   <div class="quienes_somos-section">
           <div>
-              <h1 class="quienes__somos_section--title text-center titulo_style">Quiénes somos</h1>
+              <h1 class="quienes__somos_section--title text-center titulo_style" id="quienesSomos">Quiénes somos</h1>
               <div class="row container_section-quienes-somos">
                 <div class="col-md-6 seccion_botellas"></div>
                 <div class="col-md-6 section-texts">
                   <section class="text_style quienes-somos-texto">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at arcu posuere, pellentesque tellus cursus, mattis erat. Quisque sollicitudin, tortor mollis vulputate dignissim, erat neque sagittis ipsum, vel posuere magna odio a ex. Integer mauris nisi, tempus condimentum faucibus sed, posuere non lorem. Ut et felis non massa dapibus dignissim. Integer sed nisi a arcu ultricies tristique.
+                    Somos un pequeño equipo especializado en la representación, comercialización y distribución de todo tipo de vinos elaborados en diversas bodegas: desde las más representativas de nuestro país a otras aún no tan populares cuya calidad de producto es impecable. Cabe señalar que también contamos con productos de ámbito internacional.
                   </section>
-                  <section class="text_style quienes-somos-texto">Suspendisse mattis nisl lorem, bibendum volutpat velit tempus nec. Suspendisse potenti. Proin viverra felis sapien, id venenatis mauris commodo non. Nullam ac nisl congue, rhoncus erat et, lacinia eros. Nunc at massa sollicitudin, accumsan est quis, scelerisque urna. In et erat vel purus suscipit bibendum et quis elit.
+                  <section class="text_style quienes-somos-texto">Trabajamos a diario para ofrecer el mejor servicio y satisfacer a los paladares más exquisitos. Nuestro objetivo es claro: dar la mejor calidad al mejor precio. Para ello nos adaptamos a ti, haciendo que tu experiencia sea inolvidable.
                   </section>
                 </div>
               </div>
@@ -49,8 +49,14 @@ export default {
 }
 
 .quienes-somos-texto{
+  text-align: center;
   max-width: 600px;
+}
 
+@media (min-width: 768px) {
+  .quienes-somos-texto{
+  text-align: right;
+  }
 }
 
 .container_section-quienes-somos{

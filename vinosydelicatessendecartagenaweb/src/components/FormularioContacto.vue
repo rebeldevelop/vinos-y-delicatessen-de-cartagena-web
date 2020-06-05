@@ -1,7 +1,7 @@
 <template>
   <div class="formulario_contacto">
           <div>
-              <h1 class="formulario__contacto_section--title text-center titulo_style">Contáctanos</h1>
+              <h1 class="formulario__contacto_section--title text-center titulo_style" id="formularioContacto">Contáctanos</h1>
               <form class="formulario-contacto">
                 <div class="form-group">
                   <label for="nameInput">Nombre</label>
@@ -16,7 +16,9 @@
                   <label for="exampleFormessageTextmControlTextarea1">Tu mensaje</label>
                   <textarea class="form-control" id="messageText" rows="9"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <div class="d-flex justify-content-end">
+                  <button type="submit" class="btn btn-primary aling-self-end">Enviar</button>
+                </div>
               </form>
           </div>
       </div>
@@ -41,7 +43,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .formulario-contacto{
-  padding: 50px;
+  padding: 0 50px 50px;
   max-width: 600px;
   margin: auto;
 }

@@ -1,5 +1,6 @@
 <template>
   <div class="header-GeneralWrapper">
+    <img src="../assets/images/todojunto.svg" alt="logo vinos y delicatessen de cartagena" class="logo__header">
   </div>
 </template>
 
@@ -23,7 +24,11 @@ export default {
 <style scoped>
 .header-GeneralWrapper{
     width:100%;
-    height: 100px;
-    background-color: tan;
+    height: 150px;
+    background-color: white;
+}
+.logo__header{
+  height: 150px;
+  padding-left: 30px;
 }
 </style>
