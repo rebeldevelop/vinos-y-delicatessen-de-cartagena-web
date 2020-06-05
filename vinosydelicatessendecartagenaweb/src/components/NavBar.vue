@@ -41,4 +41,10 @@ export default {
 .item-menu{
 padding: 0 30px;
 }
+.navBar-buttonsZone > nav{
+  width:300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 </style>
