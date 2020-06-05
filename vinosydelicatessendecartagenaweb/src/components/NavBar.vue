@@ -48,7 +48,7 @@ padding: 0 30px;
   align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .menu{
     align-items: center;
   }
