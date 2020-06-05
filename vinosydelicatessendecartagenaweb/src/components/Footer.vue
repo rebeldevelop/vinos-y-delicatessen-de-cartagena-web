@@ -34,6 +34,12 @@ export default {
     padding-left: 30px;
 }
 .logo_footer{
-  height: 150px;
+  height:0;
 }
+@media (min-width: 768px) {
+  .logo_footer{
+    height: 150px;
+  }
+}
+
 </style>

@@ -43,12 +43,18 @@ export default {
     background-position: top;
     text-align: center;
 }
+@media (min-width: 768px) {
+  .seccion_botellas{
+  min-height: 700px;
+  }
+}
 
 .logo_image{
   height: 300px;
 }
 
 .quienes-somos-texto{
+  padding: 15px;
   text-align: center;
   max-width: 600px;
 }
@@ -61,6 +67,7 @@ export default {
 
 .container_section-quienes-somos{
   min-height: 500px;
+  position: relative;
 }
 
 .section-texts{
@@ -68,5 +75,14 @@ export default {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .section-texts{
+  background-color:rgba(255, 255, 255, 0.685);
+  position:absolute;
+  top: 15%;
+  }
 }
 </style>

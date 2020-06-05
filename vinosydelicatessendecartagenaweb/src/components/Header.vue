@@ -29,6 +29,6 @@ export default {
 }
 .logo__header{
   height: 150px;
-  padding-left: 30px;
+  padding-left: 5%;
 }
 </style>

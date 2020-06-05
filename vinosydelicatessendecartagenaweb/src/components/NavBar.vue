@@ -1,7 +1,7 @@
 <template>
   <div class="navBar-GeneralWrapper d-flex justify-content-around">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav menu">
           <li class="nav-item item-menu active">
             <a class="nav-link" href="#inicio">Home</a>
           </li>
@@ -47,4 +47,11 @@ padding: 0 30px;
   justify-content: space-between;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .menu{
+    align-items: center;
+  }
+}
+
 </style>
