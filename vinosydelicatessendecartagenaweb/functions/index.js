@@ -23,11 +23,11 @@ exports.sendMail = functions.https.onRequest((req, res) => {
     const body = req.query.html
 
     const mailOptions = {
-      from: from, // 'RebelDevelop<rebeldevelop@gmail.com>', // Something like: Jane Doe <janedoe@gmail.com>
+      from: from,
       to: dest,
-      subject: 'Nuevo mail desde la web', // email subject
+      subject: 'Nuevo mail desde la web',
       html: body
-    }    
+    }
     return transporter.sendMail(mailOptions, (erro, info) => {
       if (erro) {
         return res.send(erro.toString())
