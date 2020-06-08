@@ -22,7 +22,6 @@
                   <textarea class="form-control" id="messageText" v-model="messageText" rows="9"></textarea>
                 </div>
                 <p v-if="errors.length">
-                  <!-- <b>Por favor, corrija el(los) siguiente(s) error(es):</b> -->
                   <ul class="errorsLabel">
                     <li v-for="error in errors" :key="error.text">{{ error }}</li>
                   </ul>
@@ -30,12 +29,6 @@
                 <div class="d-flex justify-content-end">
                   <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>
-                <!-- <p>
-                  <input
-                    type="submit"
-                    value="Enviar"
-                  >
-                </p> -->
               </form>
           </div>
       </div>

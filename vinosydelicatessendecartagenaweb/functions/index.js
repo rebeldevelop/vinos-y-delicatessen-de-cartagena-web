@@ -21,7 +21,6 @@ exports.sendMail = functions.https.onRequest((req, res) => {
     const from = req.query.from
     const dest = req.query.dest
     const body = req.query.html
-
     const mailOptions = {
       from: from,
       to: dest,
@@ -32,7 +31,8 @@ exports.sendMail = functions.https.onRequest((req, res) => {
       if (erro) {
         return res.send(erro.toString())
       }
-      return res.send('Mensaje enviado correctamente')
+      console.log(req)
+      return res.redirect('http://localhost:8080/#/MensajeEnviado')
     })
   })
 })

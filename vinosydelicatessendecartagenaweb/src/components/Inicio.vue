@@ -1,7 +1,7 @@
 <template>
-   <div class="inicio_section">
+  <div class="inicio_section">
     <h1 class="inicio_section--title text-center titulo_style">Somos tradición y compromiso</h1>
-    </div>
+  </div>
 </template>
 
 <script>
