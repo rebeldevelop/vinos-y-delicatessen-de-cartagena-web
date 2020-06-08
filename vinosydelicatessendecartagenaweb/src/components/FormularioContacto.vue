@@ -68,7 +68,6 @@ export default {
       window.location.href = totalURL
     },
     checkForm: function (e) {
-      alert(this.name)
       if (this.name && this.email && this.messageText) {
         this.sendMail()
       }
