@@ -3,13 +3,13 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <ul class="navbar-nav menu">
           <li class="nav-item item-menu active">
-            <a class="nav-link" href="#inicio">Home</a>
+            <a class="nav-link" href="#inicio">{{$t('home')}}</a>
           </li>
           <li class="nav-item item-menu">
-            <a class="nav-link" href="#quienesSomos">Quiénes somos</a>
+            <a class="nav-link" href="#quienesSomos">{{$t('quienesSomos')}}</a>
           </li>
           <li class="nav-item item-menu">
-            <a class="nav-link" href="#formularioContacto">Contáctanos</a>
+            <a class="nav-link" href="#formularioContacto">{{$t('contacto')}}</a>
           </li>
         </ul>
     </nav>

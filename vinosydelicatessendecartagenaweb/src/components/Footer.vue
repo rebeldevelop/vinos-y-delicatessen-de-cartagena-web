@@ -1,7 +1,7 @@
 <template>
   <div class="footer row d-flex justify-content-between">
         <div class="col-md-6">
-            <p class="direction">Calle Budapest 56</p>
+            <p class="direction">C/ Budapest 56</p>
             <p class="direction">30392 Cartagena, Murcia</p>
             <p class="direction">0034 699 213 851</p>
         </div>

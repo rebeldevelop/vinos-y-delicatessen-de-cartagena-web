@@ -1,6 +1,6 @@
 <template>
   <div class="inicio_section">
-    <h1 class="inicio_section--title text-center titulo_style">Somos tradición y compromiso</h1>
+    <h1 class="inicio_section--title text-center titulo_style">{{$t('somosTradicion')}}</h1>
   </div>
 </template>
 

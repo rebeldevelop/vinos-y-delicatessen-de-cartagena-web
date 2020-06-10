@@ -1,15 +1,12 @@
 <template>
   <div class="quienes_somos-section">
           <div>
-              <h1 class="quienes__somos_section--title text-center titulo_style" id="quienesSomos">Quiénes somos</h1>
+              <h1 class="quienes__somos_section--title text-center titulo_style" id="quienesSomos">{{$t('quienesSomos')}}</h1>
               <div class="row container_section-quienes-somos">
                 <div class="col-md-6 seccion_botellas"></div>
                 <div class="col-md-6 section-texts">
-                  <section class="text_style quienes-somos-texto">
-                    Somos un pequeño equipo especializado en la representación, comercialización y distribución de todo tipo de vinos elaborados en diversas bodegas: desde las más representativas de nuestro país a otras aún no tan populares cuya calidad de producto es impecable. Cabe señalar que también contamos con productos de ámbito internacional.
-                  </section>
-                  <section class="text_style quienes-somos-texto">Trabajamos a diario para ofrecer el mejor servicio y satisfacer a los paladares más exquisitos. Nuestro objetivo es claro: dar la mejor calidad al mejor precio. Para ello nos adaptamos a ti, haciendo que tu experiencia sea inolvidable.
-                  </section>
+                  <section class="text_style quienes-somos-texto">{{$t('primerParrafo')}}</section>
+                  <section class="text_style quienes-somos-texto">{{$t('segundoParrafo')}}</section>
                 </div>
               </div>
           </div>

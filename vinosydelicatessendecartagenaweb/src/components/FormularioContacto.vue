@@ -1,7 +1,7 @@
 <template>
   <div class="formulario_contacto">
           <div>
-              <h1 class="formulario__contacto_section--title text-center titulo_style" id="formularioContacto">Contáctanos</h1>
+              <h1 class="formulario__contacto_section--title text-center titulo_style" id="formularioContacto">{{$t('contactanos')}}</h1>
               <form
                 id="FormularioContacto"
                 @submit="checkForm"
@@ -10,15 +10,15 @@
                 class="formulario-contacto"
               >
                 <div class="form-group">
-                  <label for="name">Nombre</label>
-                  <input type="text" class="form-control" id="name" v-model="name" aria-describedby="nombreHelp" placeholder="tu nombre">
+                  <label for="name">{{$t('nombre')}}</label>
+                  <input type="text" class="form-control" id="name" v-model="name" aria-describedby="nombreHelp" :placeholder='$t("tuNombre")'>
                 </div>
                 <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" v-model="email" placeholder="tu email">
+                  <label for="email">{{$t('email')}}</label>
+                  <input type="email" class="form-control" id="email" v-model="email" :placeholder='$t("tuEmail")'>
                 </div>
                 <div class="form-group">
-                  <label for="messageText">Tu mensaje</label>
+                  <label for="messageText">{{$t('tuMensaje')}}</label>
                   <textarea class="form-control" id="messageText" v-model="messageText" rows="9"></textarea>
                 </div>
                 <p v-if="errors.length">
@@ -27,7 +27,7 @@
                   </ul>
                 </p>
                 <div class="d-flex justify-content-end">
-                  <button type="submit" class="btn btn-primary">Enviar</button>
+                  <button type="submit" class="btn btn-primary">{{$t('enviar')}}</button>
                 </div>
               </form>
           </div>
