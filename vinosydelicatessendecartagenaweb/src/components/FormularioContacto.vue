@@ -27,7 +27,7 @@
                   </ul>
                 </p>
                 <div class="d-flex justify-content-end">
-                  <button type="submit" class="btn btn-success">{{$t('enviar')}}</button>
+                  <button type="submit" id="btnEnviar" class="btn btn-success" :disabled="hasClicked">{{$t('enviar')}}</button>
                 </div>
               </form>
           </div>
@@ -42,7 +42,8 @@ export default {
       errors: [],
       name: null,
       email: null,
-      messageText: null
+      messageText: null,
+      hasClicked: false
     }
   },
   // computed : {}
@@ -50,6 +51,7 @@ export default {
   // props: {}
   methods: {
     sendMail: function (e) {
+      this.hasClicked = true
       var initialURL = 'https://us-central1-vinosydelicatessendecartagena.cloudfunctions.net//sendMail?'
       var destinatario = 'dest=rebeldevelop@gmail.com'
       var remitente = '&from=remitente@gmail.com'

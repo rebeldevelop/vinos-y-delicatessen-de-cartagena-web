@@ -32,7 +32,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
         return res.send(erro.toString())
       }
       console.log(req)
-      return res.redirect('http://localhost:8080/#/MensajeEnviado')
+      return res.redirect('https://vinosydelicatessendecartagena.web.app/#/')
     })
   })
 })
