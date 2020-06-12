@@ -27,7 +27,7 @@
                   </ul>
                 </p>
                 <div class="d-flex justify-content-end">
-                  <button type="submit" class="btn btn-primary">{{$t('enviar')}}</button>
+                  <button type="submit" class="btn btn-success">{{$t('enviar')}}</button>
                 </div>
               </form>
           </div>

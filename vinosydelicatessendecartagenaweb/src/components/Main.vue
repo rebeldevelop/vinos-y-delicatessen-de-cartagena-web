@@ -37,4 +37,13 @@ export default {
     width: 100vw;
     height: auto;
 }
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: #4A4A4A;
+}
+
+a:hover{
+    color: #751027;
+    border-bottom: 1px solid #751027;
+}
 </style>
