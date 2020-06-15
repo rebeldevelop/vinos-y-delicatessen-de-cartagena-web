@@ -1,10 +1,12 @@
 <template>
   <div class="main-GeneralWrapper">
-    <div style="width:100%;display:flex;justify-content:flex-end;padding-right: 50px;margin-top:10px;">
+    <div class= "d-flex justify-content-between">
+    <Header></Header>
+    <div class="languaje_container ">
       <a href="#" @click="setLocale('es')">Español</a>
       <a href="#" @click="setLocale('en')" style="margin-left:15px;" >English</a>
     </div>
-    <Header></Header>
+    </div>
     <NavBar></NavBar>
     <PageBody></PageBody>
   </div>
@@ -37,6 +39,10 @@ export default {
     width: 100vw;
     height: auto;
 }
+
+a{
+  height: 25px;
+}
 a:link, a:visited, a:active {
     text-decoration:none;
     color: #4A4A4A;
@@ -45,5 +51,13 @@ a:link, a:visited, a:active {
 a:hover{
     color: #751027;
     border-bottom: 1px solid #751027;
+}
+
+.languaje_container{
+  width:100%;
+  display:flex;
+  justify-content:flex-end;
+  margin-top:10px;
+  padding-right: 30px;
 }
 </style>

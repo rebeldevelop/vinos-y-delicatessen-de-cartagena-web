@@ -34,11 +34,24 @@ export default {
 }
 
 .inicio_section--title{
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: center;
     position: relative;
     top: 50%;
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);}
+    transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .inicio_section--title{
+     font-size: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .inicio_section--title{
+     font-size: 5rem;
+  }
+}
 </style>

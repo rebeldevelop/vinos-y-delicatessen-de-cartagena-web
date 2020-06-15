@@ -80,6 +80,13 @@ export default {
   background-color:rgba(255, 255, 255, 0.685);
   position:absolute;
   top: 15%;
+  padding-right: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section-texts{
+  padding-right: 50px;
   }
 }
 </style>
