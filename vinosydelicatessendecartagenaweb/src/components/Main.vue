@@ -1,10 +1,12 @@
 <template>
   <div class="main-GeneralWrapper">
-    <div class="languaje_container">
+    <div class= "d-flex justify-content-between">
+    <Header></Header>
+    <div class="languaje_container ">
       <a href="#" @click="setLocale('es')">Español</a>
       <a href="#" @click="setLocale('en')" style="margin-left:15px;" >English</a>
     </div>
-    <Header></Header>
+    </div>
     <NavBar></NavBar>
     <PageBody></PageBody>
   </div>
@@ -36,6 +38,10 @@ export default {
 .main-GeneralWrapper{
     width: 100vw;
     height: auto;
+}
+
+a{
+  height: 25px;
 }
 a:link, a:visited, a:active {
     text-decoration:none;
