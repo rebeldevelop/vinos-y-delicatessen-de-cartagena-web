@@ -1,11 +1,13 @@
 <template>
-  <div class="footer row d-flex justify-content-between">
-        <div class="col-6 direction_container">
+  <div class="footer d-flex justify-content-between">
+        <div class="direction_container">
             <p class="direction">C/ Budapest 56</p>
             <p class="direction">30392 Cartagena, Murcia</p>
             <p class="direction">0034 699 213 851</p>
         </div>
-        <img src='../assets/images/letrassolas.svg' class="col-6 logo_footer my-auto">
+        <div class="logo_footer-container align-self-center">
+          <img src='../assets/images/letrassolas.svg' class="logo_footer my-auto">
+        </div>
     </div>
 </template>
 
@@ -45,6 +47,16 @@ export default {
 @media (min-width: 768px) {
   .logo_footer{
     height: 150px;
+  }
+}
+
+.logo_footer-container{
+  margin-right: 80px;
+}
+
+@media (max-width: 768px) {
+  .logo_footer-container{
+  margin-right: 20px;
   }
 }
 
