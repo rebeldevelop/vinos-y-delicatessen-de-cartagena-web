@@ -31,8 +31,13 @@ export default {
     background-repeat: no-repeat;
     background-position: top;
     text-align: center;
+    animation-name: fadeAnimation;
+    animation-duration: 3s;
 }
-
+@keyframes fadeAnimation {
+  from {opacity: 0.2;}
+  to {opacity: 1;}
+}
 .inicio_section--title{
     font-size: 3rem;
     text-align: center;

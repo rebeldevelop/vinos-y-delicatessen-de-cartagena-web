@@ -1,6 +1,7 @@
 <template>
   <div class="header-GeneralWrapper">
     <!-- <h3>{{$t('quienesSomos')}}</h3> -->
+    <p>Version 1.0</p>
     <img src="../assets/images/todojunto.svg" alt="logo vinos y delicatessen de cartagena" class="logo__header">
   </div>
 </template>
