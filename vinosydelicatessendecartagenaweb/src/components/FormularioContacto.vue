@@ -53,12 +53,12 @@ export default {
     sendMail: function (e) {
       this.hasClicked = true
       var initialURL = 'https://us-central1-vinosydelicatessendecartagena.cloudfunctions.net//sendMail?'
-      var destinatario = 'dest=rebeldevelop@gmail.com'
+      var destinatario = 'dest=vinosydelicatessencartagena@gmail.com'
       var remitente = '&from=remitente@gmail.com'
       var nombreInput = this.name
       var emailInput = this.email
       var mensajeTextBox = this.messageText
-      var body = '&html=<h3>Nombre:</h3><br><p>' + nombreInput + '</p><br><h3>Mail del Remitente:</h3><br><p>' + emailInput + '</p><br><h3>Mensaje:</h3><br><p>' + mensajeTextBox + '</p>'
+      var body = '&html=<p style="margin:0;padding:0;text-decoration: underline;">Nombre:</p><br><p style="margin:10;padding:0;">' + nombreInput + '</p><br><p style="margin:0;padding:0;text-decoration: underline;">Mail del Remitente:</p><br><p style="margin:10;padding:0;">' + emailInput + '</p><br><p style="margin:0;padding:0;text-decoration: underline;">Mensaje:</p><br><p style="margin:10;padding:0;">' + mensajeTextBox + '</p>'
       var totalURL = initialURL + destinatario + remitente + body
       window.location.href = totalURL
     },
