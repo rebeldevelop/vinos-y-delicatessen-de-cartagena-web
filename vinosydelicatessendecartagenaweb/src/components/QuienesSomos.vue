@@ -1,16 +1,11 @@
 <template>
   <div class="quienes_somos-section">
-          <div>
-              <h1 class="quienes__somos_section--title text-center titulo_style" id="quienesSomos">{{$t('quienesSomos')}}</h1>
-              <div class="row container_section-quienes-somos">
-                <div class="col-md-6 seccion_botellas"></div>
-                <div class="col-md-6 section-texts">
-                  <section class="text_style quienes-somos-texto">{{$t('primerParrafo')}}</section>
-                  <section class="text_style quienes-somos-texto">{{$t('segundoParrafo')}}</section>
-                </div>
-              </div>
-          </div>
+    <h1 class="quienes__somos-title text-center titulo_style" id="quienesSomos">{{$t('quienesSomos')}}</h1>
+      <div class="section-texts">
+        <section class="text_style quienes-somos-texto">{{$t('primerParrafo')}}</section>
+        <section class="text_style quienes-somos-texto">{{$t('segundoParrafo')}}</section>
       </div>
+  </div>
 </template>
 
 <script>
@@ -31,18 +26,24 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.seccion_botellas{
-    background-image: url('../assets/images/bottles.png');
+.quienes_somos-section{
+  background-image: url('../assets/images/corks-in-bottles.png');
+  display: flex;
     height: auto;
-    position: relative;
+    /* position: relative; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 5px solid #923E50;
 }
 @media (min-width: 768px) {
-  .seccion_botellas{
-  min-height: 700px;
+  .quienes_somos-section{
+  min-height: 600px;
+
   }
 }
 
@@ -55,16 +56,15 @@ export default {
   text-align: center;
   max-width: 600px;
 }
-
-@media (min-width: 768px) {
-  .quienes-somos-texto{
-  text-align: right;
-  }
-}
+/* .quienes__somos_section--title{
+  color: white;
+  position: absolute;
+  top: 20px;
+} */
 
 .container_section-quienes-somos{
-  min-height: 500px;
-  position: relative;
+  /* text-align: center;
+  min-height: 500px; */
 }
 
 .section-texts{
@@ -73,20 +73,26 @@ export default {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-}
-
-@media (max-width: 768px) {
-  .section-texts{
   background-color:rgba(255, 255, 255, 0.685);
-  position:absolute;
-  top: 15%;
-  padding-right: 50px;
-  }
 }
 
-@media (max-width: 1200px) {
+.quienes__somos-title{
+  margin-bottom: 60px;
+}
+
+/* @media (max-width: 768px) {
+  .section-texts{
+  padding: 50px;
+  }
+} */
+
+  /* .section-texts{
+  position:absolute;
+  } */
+
+/* @media (max-width: 1200px) {
   .section-texts{
   padding-right: 50px;
   }
-}
+} */
 </style>

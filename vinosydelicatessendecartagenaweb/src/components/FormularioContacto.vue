@@ -89,9 +89,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .formulario-contacto{
-  padding: 0 50px 50px;
+  padding: 80px 50px 50px;
   max-width: 600px;
   margin: auto;
+}
+.formulario__contacto_section--title{
+  margin-top: 50px;
+  color: black;
 }
 .errorsLabel{
   width:100%;

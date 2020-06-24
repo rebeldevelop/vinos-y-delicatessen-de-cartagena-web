@@ -33,6 +33,7 @@ export default {
     text-align: center;
     animation-name: fadeAnimation;
     animation-duration: 3s;
+    border-bottom: 5px solid #923E50;
 }
 @keyframes fadeAnimation {
   from {opacity: 0.2;}
