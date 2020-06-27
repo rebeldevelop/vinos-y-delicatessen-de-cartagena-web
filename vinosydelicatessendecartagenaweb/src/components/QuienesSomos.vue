@@ -29,11 +29,12 @@ export default {
 .quienes_somos-section{
   background-image: url('../assets/images/corks-in-bottles.png');
   display: flex;
-  height: auto;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  text-align: center;
+    height: auto;
+    /* position: relative; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    text-align: center;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -42,6 +43,7 @@ export default {
 @media (min-width: 768px) {
   .quienes_somos-section{
   min-height: 600px;
+
   }
 }
 
@@ -54,12 +56,35 @@ export default {
   text-align: center;
   max-width: 600px;
 }
+/* .quienes__somos_section--title{
+  color: white;
+  position: absolute;
+  top: 20px;
+} */
+
+.container_section-quienes-somos{
+  /* text-align: center;
+  min-height: 500px; */
+}
+
+.section-texts{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background-color:rgba(255, 255, 255, 0.685);
+}
 
 @media (min-width: 768px) {
  .quienes__somos-title{
   margin-bottom: 60px;
 }
 }
+
+  /* .section-texts{
+  position:absolute;
+  } */
 
 @media (max-width: 768px) {
   .section-texts{
