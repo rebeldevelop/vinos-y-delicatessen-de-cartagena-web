@@ -25,7 +25,8 @@
   }
   
   .titulo_style{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    /* font-family: 'Quicksand', sans-serif; */
     font-weight: 400;
     font-size: 2.5rem;
     padding: 20px 20px;
