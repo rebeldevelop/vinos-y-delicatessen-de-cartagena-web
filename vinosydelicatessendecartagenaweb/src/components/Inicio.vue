@@ -24,7 +24,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .inicio_section{
-    background-image: url('../assets/images/inicio.png');
+    background-image: url('../assets/images/copa.jpg');
     height: 100vh;
     position: relative;
     background-size: cover;
