@@ -75,13 +75,13 @@ export default {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-  background-color:rgba(255, 255, 255, 0.685);
+  background-color:rgba(255, 255, 255, 80%);
 }
 
 @media (min-width: 768px) {
  .quienes__somos-title{
   margin-bottom: 20px;
-  margin-top:60px;
+  margin-top:100px;
 }
 }
 

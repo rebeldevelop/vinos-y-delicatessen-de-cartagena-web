@@ -24,8 +24,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .inicio_section{
-    background-image: url('../assets/images/inicioDegradado.png');
     height: 100vh;
+    /* background-image: url('../assets/images/inicioDegradado.png'); */
+    background-image: url('../assets/images/copa.jpg');
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -47,7 +48,7 @@ export default {
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    /* text-shadow: 0 0 20px rgba(0, 0, 0, 0.8); */
 }
 
 @media (min-width: 768px) {

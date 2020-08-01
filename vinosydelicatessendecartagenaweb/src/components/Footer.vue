@@ -35,10 +35,10 @@ export default {
 }
 
 .direction{
-    color: white;
-    font-family: 'Abhaya Libre', serif;
-    margin: 20px 0 0 0;
-    padding-left: 30px;
+  font-family: 'Poiret One', cursive;
+  color: white;
+  margin: 20px 0 0 0;
+  padding-left: 30px;
 }
 .logo_footer{
   height: 100px;
