@@ -36,9 +36,9 @@ export default {
     background-position: top;
     text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
-  border-bottom: 5px solid #923E50;
+  border-bottom: 25px solid #923E50;
 }
 @media (min-width: 768px) {
   .quienes_somos-section{
@@ -50,7 +50,9 @@ export default {
 .logo_image{
   height: 300px;
 }
-
+.quienes__somos-title{
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
 .quienes-somos-texto{
   padding: 15px;
   text-align: center;
@@ -78,7 +80,8 @@ export default {
 
 @media (min-width: 768px) {
  .quienes__somos-title{
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+  margin-top:60px;
 }
 }
 

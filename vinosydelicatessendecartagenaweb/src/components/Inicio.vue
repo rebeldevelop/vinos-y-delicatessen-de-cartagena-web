@@ -24,16 +24,16 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .inicio_section{
-    background-image: url('../assets/images/inicio.png');
+    background-image: url('../assets/images/inicioDegradado.png');
     height: 100vh;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: bottom;
     text-align: center;
     animation-name: fadeAnimation;
     animation-duration: 3s;
-    border-bottom: 5px solid #923E50;
+    /* border-bottom: 5px solid #923E50; */
 }
 @keyframes fadeAnimation {
   from {opacity: 0.2;}
@@ -47,6 +47,7 @@ export default {
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 @media (min-width: 768px) {
