@@ -48,6 +48,7 @@ export default {
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+    text-shadow: 2px 2px 2px black;
     /* text-shadow: 0 0 20px rgba(0, 0, 0, 0.8); */
 }
 

@@ -2,7 +2,7 @@
   <div class="footer d-flex justify-content-between">
         <div class="direction_container">
             <p class="direction">C/ Budapest 56</p>
-            <p class="direction">30392 Cartagena, Murcia</p>
+            <p class="direction">30353 Cartagena, Murcia</p>
             <p class="direction">0034 699 213 851</p>
         </div>
         <div class="logo_footer-container align-self-center">
@@ -58,6 +58,10 @@ export default {
   .logo_footer-container{
   margin-right: 20px;
   }
+  .direction_container{
+  min-width: 200px;
+  font-size: 12px;
+}
 }
 
 </style>

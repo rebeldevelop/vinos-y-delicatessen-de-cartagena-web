@@ -60,4 +60,9 @@ a:hover{
   margin-top:10px;
   padding-right: 30px;
 }
+@media (max-width: 768px) {
+  .languaje_container{
+  font-size: 14px;
+}
+}
 </style>
