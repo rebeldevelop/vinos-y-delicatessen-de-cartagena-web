@@ -34,7 +34,27 @@
       </div>
 </template>
 
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDiZKt1qPWCgPSgWKc7lETkBcpO53-IZo8",
+    authDomain: "vinosydelicatessendecartagena.firebaseapp.com",
+    databaseURL: "https://vinosydelicatessendecartagena.firebaseio.com",
+    projectId: "vinosydelicatessendecartagena",
+    storageBucket: "vinosydelicatessendecartagena.appspot.com",
+    messagingSenderId: "316936332273",
+    appId: "1:316936332273:web:59f9f36e33b9134d62da50",
+    measurementId: "G-5HTY6E5NHY"
+  };
+  firebase.initializeApp(config);
+
+  //REFERENCIA A LA BASE DE DATOS
+  var db = firebase.database();
+</script>
+<script>
+import router from '@/router'
 export default {
   name: 'FormularioContacto',
   data () {
@@ -43,7 +63,7 @@ export default {
       name: null,
       email: null,
       messageText: null,
-      hasClicked: false
+      hasClicked: false,
     }
   },
   // computed : {}
@@ -51,16 +71,32 @@ export default {
   // props: {}
   methods: {
     sendMail: function (e) {
+      // METEDO DE FIREBASE QUE NO FUNCIONA CON NODE.JS 10
+      // var initialURL = 'https://us-central1-vinosydelicatessendecartagena.cloudfunctions.net//sendMail?'
+      // var destinatario = 'dest=vinosydelicatessencartagena@gmail.com'
+      // var remitente = '&from=remitente@gmail.com'
+      // var nombreInput = this.name
+      // var emailInput = this.email
+      // var mensajeTextBox = this.messageText
+      // var body = '&html=<p style="margin:0;padding:0;text-decoration: underline;">Nombre:</p><br><p style="margin:10;padding:0;">' + nombreInput + '</p><br><p style="margin:0;padding:0;text-decoration: underline;">Mail del Remitente:</p><br><p style="margin:10;padding:0;">' + emailInput + '</p><br><p style="margin:0;padding:0;text-decoration: underline;">Mensaje:</p><br><p style="margin:10;padding:0;">' + mensajeTextBox + '</p>'
+      // var totalURL = initialURL + destinatario + remitente + body
+      // window.location.href = totalURL
+      console.log('lo intento')
       this.hasClicked = true
-      var initialURL = 'https://us-central1-vinosydelicatessendecartagena.cloudfunctions.net//sendMail?'
-      var destinatario = 'dest=vinosydelicatessencartagena@gmail.com'
-      var remitente = '&from=remitente@gmail.com'
-      var nombreInput = this.name
-      var emailInput = this.email
-      var mensajeTextBox = this.messageText
-      var body = '&html=<p style="margin:0;padding:0;text-decoration: underline;">Nombre:</p><br><p style="margin:10;padding:0;">' + nombreInput + '</p><br><p style="margin:0;padding:0;text-decoration: underline;">Mail del Remitente:</p><br><p style="margin:10;padding:0;">' + emailInput + '</p><br><p style="margin:0;padding:0;text-decoration: underline;">Mensaje:</p><br><p style="margin:10;padding:0;">' + mensajeTextBox + '</p>'
-      var totalURL = initialURL + destinatario + remitente + body
-      window.location.href = totalURL
+      event.preventDefault();
+      db.ref('/mensajes/nuevosMensajes').push({
+        'Nombre': this.name,
+        'Email': this.email,
+        'Mensaje': this.messageText
+      }).then(() => {
+        console.log("mensaje enviado")
+        router.push({name: 'MensajeEnviado'})
+      })
+      // db.ref('/mensajes/nuevosMensajes').set({
+      //   nombre: this.name,
+      //   emailRemitente: this.email,
+      //   mensaje: this.messageText
+      // })
     },
     checkForm: function (e) {
       if (this.name && this.email && this.messageText) {

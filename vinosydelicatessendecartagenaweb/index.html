@@ -11,5 +11,24 @@
     <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDiZKt1qPWCgPSgWKc7lETkBcpO53-IZo8",
+        authDomain: "vinosydelicatessendecartagena.firebaseapp.com",
+        databaseURL: "https://vinosydelicatessendecartagena.firebaseio.com",
+        projectId: "vinosydelicatessendecartagena",
+        storageBucket: "vinosydelicatessendecartagena.appspot.com",
+        messagingSenderId: "316936332273",
+        appId: "1:316936332273:web:59f9f36e33b9134d62da50",
+        measurementId: "G-5HTY6E5NHY"
+      };
+      firebase.initializeApp(config);
+
+      //REFERENCIA A LA BASE DE DATOS
+      var db = firebase.database();
+    </script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 <template>
   <div class="mensajeEnviado" style="display:flex;justify-content:center;flex-direction:column;margin-top:30px;">
-      <h2 style="margin:0;padding:0;" class="text-center titulo_style">{{$t('mensajeCorrecto')}}</h2>
+      <h2 style="margin:0;padding:0;color:black;" class="text-center titulo_style">{{$t('mensajeCorrecto')}}</h2>
       <p style="margin:0;padding:0;text-align: center;width:100%;">{{$t('contactaremos')}}</p>
       <div class="d-flex justify-content-center" style="margin-top:20px;">
         <a type="submit" class="btn btn-success" href="https://vinosydelicatessencartagena.com/">{{$t('volver')}}</a>
