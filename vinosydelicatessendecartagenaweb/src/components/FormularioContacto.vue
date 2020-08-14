@@ -71,7 +71,7 @@ export default {
   // props: {}
   methods: {
     sendMail: function (e) {
-      // METEDO DE FIREBASE QUE NO FUNCIONA CON NODE.JS 10
+      // METODO DE FIREBASE QUE NO FUNCIONA CON NODE.JS 10
       // var initialURL = 'https://us-central1-vinosydelicatessendecartagena.cloudfunctions.net//sendMail?'
       // var destinatario = 'dest=vinosydelicatessencartagena@gmail.com'
       // var remitente = '&from=remitente@gmail.com'
@@ -81,22 +81,17 @@ export default {
       // var body = '&html=<p style="margin:0;padding:0;text-decoration: underline;">Nombre:</p><br><p style="margin:10;padding:0;">' + nombreInput + '</p><br><p style="margin:0;padding:0;text-decoration: underline;">Mail del Remitente:</p><br><p style="margin:10;padding:0;">' + emailInput + '</p><br><p style="margin:0;padding:0;text-decoration: underline;">Mensaje:</p><br><p style="margin:10;padding:0;">' + mensajeTextBox + '</p>'
       // var totalURL = initialURL + destinatario + remitente + body
       // window.location.href = totalURL
-      console.log('lo intento')
+      //METODO DE PUSH EN FIREBASE DATABASE
       this.hasClicked = true
       event.preventDefault();
       db.ref('/mensajes/nuevosMensajes').push({
         'Nombre': this.name,
         'Email': this.email,
-        'Mensaje': this.messageText
+        'Mensaje': this.messageText,
+        'Fecha': Date()
       }).then(() => {
-        console.log("mensaje enviado")
         router.push({name: 'MensajeEnviado'})
       })
-      // db.ref('/mensajes/nuevosMensajes').set({
-      //   nombre: this.name,
-      //   emailRemitente: this.email,
-      //   mensaje: this.messageText
-      // })
     },
     checkForm: function (e) {
       if (this.name && this.email && this.messageText) {

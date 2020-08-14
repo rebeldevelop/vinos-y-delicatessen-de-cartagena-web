@@ -10,7 +10,7 @@
         class="formulario-password"
       >
         <div class="form-group container">
-          <label for="password" class="mb-3">{{$t('Introduce la contraseña')}}</label>
+          <label for="password" class="mb-3">Introduce la contraseña</label>
           <input type="text" class="form-control input__password" id="password" v-model="password" aria-describedby="nombreHelp">
         <p v-if="errors.length">
           <ul class="errorsLabel">
@@ -18,7 +18,7 @@
           </ul>
         </p>
           <div class="d-flex justify-content-center mt-4">
-            <button type="submit" id="btnAceptar" class="btn btn-success">{{$t('Entrar')}}</button>
+            <button type="submit" id="btnAceptar" class="btn btn-success">Entrar</button>
           </div>
         </div>
       </form>

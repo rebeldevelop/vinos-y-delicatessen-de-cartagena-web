@@ -2,7 +2,7 @@
   <div class="adminPage-mensajes">
     <h1 class="title align-self-center">Mensajes Recibidos</h1>
     <div class="mensajesContainer">
-        <div class="mensaje" v-for="item in mensajes" :key="item.id" @click="selectItem(item)">
+        <div class="mensaje" v-for="item in mensajes" :key="item.id">
             <div class="mensajeInfo">
                 <p class="mensajeLabel">Nombre remitente:</p>
                 <p class="product-nombre"> {{ item.nombre }} </p>
@@ -10,6 +10,13 @@
                 <p class="product-nombre"> {{ item.email }} </p>
                 <p class="mensajeLabel">Mensaje:</p>
                 <p class="product-nombre"> {{ item.mensaje }} </p>
+                <p class="mensajeLabel">Fecha:</p>
+                <p class="product-nombre"> {{ item.fecha }} </p>
+                <p class="mensajeLabel">ID:</p>
+                <p class="product-nombre"> {{ item.id }} </p>
+            </div>
+            <div class="d-flex justify-content-end mt-4">
+              <button id="btnEliminar" class="btn btn-success btnEliminar" @click="eliminarMensaje(item.id)">Eliminar</button>
             </div>
         </div>
     </div>
@@ -39,25 +46,28 @@ export default {
   name: 'AdminpageMensajes',
   data () {
     return {
-      mensajes: []
+      mensajes: [],
+      fecha: ''
     }
   },
   methods : {
       cargarElementos (datos){
-      console.log(datos)
       this.mensajes = []
       for (let key in datos) {
         this.mensajes.push({
+          id: key,
           nombre: datos[key].Nombre,
           email: datos[key].Email,
-          mensaje: datos[key].Mensaje
+          mensaje: datos[key].Mensaje,
+          fecha: datos[key].Fecha
         })
       }
+    },
+    eliminarMensaje (id) {
+      db.ref('/mensajes/nuevosMensajes/' + id).remove()
     }
   },
   created () {
-    // console.log(db.ref('/'));
-    // console.log('cargando mensajes')
     db.ref('/mensajes/nuevosMensajes').on('value', datos  => this.cargarElementos(datos.val()))
   }
   // computed : {}
@@ -88,16 +98,20 @@ export default {
 }
 .mensaje{
     width: 80%;
+    max-width: 1200px;
     height: auto;
     min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin:10px;
-    border-bottom: 0.5px solid grey;
+    /* border-bottom: 0.5px solid grey; */
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
 }
 .mensajeInfo{
-    margin-left: 20px;
+    margin:0 20px;
+    padding-top:30px;
 }
 .mensajeLabel{
     color: rgb(23, 76, 146);
@@ -105,5 +119,9 @@ export default {
 }
 .product-nombre{
   color: rgb(51, 51, 51);
+}
+.btnEliminar{
+  margin-bottom: 10px;
+  margin-right: 20px;
 }
 </style>
