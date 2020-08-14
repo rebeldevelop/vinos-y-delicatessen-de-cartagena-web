@@ -1,6 +1,6 @@
 <template>
   <div class="adminPage-mensajes">
-    <p>Mensajes Recibidos</p>
+    <h1 class="title align-self-center">Mensajes Recibidos</h1>
     <div class="mensajesContainer">
         <div class="mensaje" v-for="item in mensajes" :key="item.id" @click="selectItem(item)">
             <div class="mensajeInfo">
@@ -71,28 +71,39 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.adminPage-mensajes{
+  display: flex;
+  flex-direction: column;
+}
+.title{
+    margin: 50px 0;
+    color: rgb(23, 76, 146);
+}
 .mensajesContainer{
     display:flex;
     flex-direction: column-reverse;
     width: 100%;
-    overflow-y: auto;
+    align-items: center;
 }
 .mensaje{
     width: 80%;
     height: auto;
     min-height: 200px;
-    background-color:antiquewhite;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid black;
     margin:10px;
+    border-bottom: 0.5px solid grey;
 }
 .mensajeInfo{
     margin-left: 20px;
 }
 .mensajeLabel{
-    color:black;
-    text-decoration: underline black;
+    color: rgb(23, 76, 146);
+    margin: 0;
+}
+.product-nombre{
+  color: rgb(51, 51, 51);
 }
 </style>

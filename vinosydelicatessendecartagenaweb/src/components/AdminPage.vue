@@ -1,6 +1,7 @@
 <template>
   <div class="adminPage">
     <div class="adminLogin" v-if="!showAdminPage">
+      <h1 class="welcome">¡Bienvenido!</h1>
       <form
         id="FormularioContacto"
         @submit="checkPassword"
@@ -8,17 +9,17 @@
         method="post"
         class="formulario-password"
       >
-        <div class="form-group">
-          <label for="password">{{$t('Introduce la contraseña')}}</label>
-          <input type="text" class="form-control" id="password" v-model="password" aria-describedby="nombreHelp">
-        </div>
+        <div class="form-group container">
+          <label for="password" class="mb-3">{{$t('Introduce la contraseña')}}</label>
+          <input type="text" class="form-control input__password" id="password" v-model="password" aria-describedby="nombreHelp">
         <p v-if="errors.length">
           <ul class="errorsLabel">
             <li v-for="error in errors" :key="error.text">{{ error }}</li>
           </ul>
         </p>
-        <div class="d-flex justify-content-end">
-          <button type="submit" id="btnAceptar" class="btn btn-success">{{$t('conectar')}}</button>
+          <div class="d-flex justify-content-center mt-4">
+            <button type="submit" id="btnAceptar" class="btn btn-success">{{$t('Entrar')}}</button>
+          </div>
         </div>
       </form>
     </div>
@@ -62,9 +63,24 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .formulario-password{
-  width:100%;
   height: 100vh;
-  background-color: antiquewhite;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container{
+  color: rgb(51, 51, 51);
+  width: 350px;
+  padding-bottom: 500px;
+}
+.welcome{
+  display: flex;
+  justify-content: center;
+  color:rgb(51, 51, 51);
+  padding-top: 200px;
 }
 </style>
